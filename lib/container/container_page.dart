@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:widget_crawler/container/box_decoration_page.dart';
 import 'package:widget_crawler/container/container_compose_page.dart';
 import 'package:widget_crawler/container/container_tile_page.dart';
+import 'package:widget_crawler/container/gradient_page.dart';
 
 class ContainerPage extends StatelessWidget {
   const ContainerPage({Key key}) : super(key: key);
@@ -34,6 +36,28 @@ class ContainerPage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) {
                   return ContainerTilePage();
                 })),
+              },
+            ),
+            ListTile(
+              title: Center(
+                child: Text('BoxDecoration'),
+              ),
+              onTap: () => {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) {
+                      return BoxDecorationPage();
+                    })),
+              },
+            ),
+            ListTile(
+              title: Center(
+                child: Text('Gradient'),
+              ),
+              onTap: () => {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) {
+                      return GradientPage();
+                    })),
               },
             )
           ],

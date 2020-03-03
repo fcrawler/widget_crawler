@@ -8,17 +8,25 @@
 .buildlog/
 .history
 .svn/
+*.lock
+.vscode
+.gradle
+.idea
+/local.properties
+.DS_Store
+/build
+.metadata
+
+
 
 # IntelliJ related
-*.iml
+
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Visual Studio Code related
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -26,8 +34,13 @@
 .flutter-plugins
 .packages
 .pub-cache/
+pubspec.lock
 .pub/
 /build/
+
+# goCli related
+go-cli/.packages
+go-cli/pubspec.lock
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -61,7 +74,6 @@
 **/ios/Flutter/app.flx
 **/ios/Flutter/app.zip
 **/ios/Flutter/flutter_assets/
-**/ios/Flutter/flutter_export_environment.sh
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
 
@@ -71,4 +83,3 @@
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
-/pubspec.lock

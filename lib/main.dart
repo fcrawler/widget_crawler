@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:widget_crawler/asyncwidget/future_page.dart';
+import 'package:widget_crawler/asyncwidget/stream_page.dart';
 import 'package:widget_crawler/container/container_page.dart';
 
 void main() => runApp(MyApp());
@@ -27,14 +29,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   _gotoRout(BuildContext context, Widget route) {
-    Navigator.push(context, MaterialPageRoute(
-              builder: (context){
-                return route;
-              }
-            ));
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return route;
+    }));
   }
 
   @override
@@ -50,10 +48,21 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Center(
               child: Text('Container'),
             ),
+          ),
+          ListTile(
+            onTap: () => _gotoRout(context, FuturePage()),
+            title: Center(
+              child: Text('FutureWidget'),
+            ),
+          ),
+          ListTile(
+            onTap: () => _gotoRout(context, StreamPage()),
+            title: Center(
+              child: Text('StreamWidget'),
+            ),
           )
         ],
       ),
     );
   }
-
 }
